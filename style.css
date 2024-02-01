@@ -1,0 +1,126 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-image: url("images/bg-desktop.svg");
+  background-color: var(--Violet);
+}
+
+.container {
+  padding: 20px;
+}
+
+.container header {
+  padding: 10px 0px 0 100px;
+  margin-bottom: 30px;
+}
+.container header img {
+  width: 200px;
+}
+
+.container section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.container section figure img {
+  width: 700px;
+}
+.container section article {
+  padding: 10px;
+  margin: 0px 10px;
+  color: white;
+}
+.container section article h2 {
+  width: 380px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.container section article p {
+  font-size: 15px;
+  margin: 20px 0px;
+  width: 465px;
+}
+.container section article button {
+  width: 230px;
+  padding: 17px;
+  border-radius: 48px;
+  font-size: 18px;
+  color: var(--Soft-Magenta);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px black;
+  transition: 0.3s ease;
+}
+.container section article button:hover {
+  color: white;
+  background-color: var(--Soft-Magenta);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 10px 0;
+  padding-right: 80px;
+}
+
+footer .icon {
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer .icon i {
+  font-size: 20px;
+  color: white;
+  margin: 7px 0;
+}
+footer .icon:hover,
+footer .icon:hover i {
+  border-color: var(--Soft-Magenta);
+  color: var(--Soft-Magenta);
+}
+
+@media (max-width: 767px) {
+  .container header {
+    padding: 0;
+  }
+  .container section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container section figure img {
+    width: 350px;
+  }
+  .container section article h2 {
+    margin: auto;
+  }
+  .container section article p {
+    width: fit-content;
+  }
+  footer {
+    justify-content: space-evenly;
+    margin: 10px auto;
+    padding: 0;
+  }
+}
